@@ -1,0 +1,266 @@
+
+
+body {
+
+
+    display: flex;
+
+
+    flex-flow: row wrap;
+
+
+    justify-content: center;
+
+
+    margin: auto;
+
+
+    width: 80vw;
+
+
+    background-color: lightgrey;
+
+
+}
+
+
+#logocmd {
+
+
+    width: 30em;
+    padding: 4em;
+
+
+}
+
+#logocmd:hover {
+
+    transform: rotate(20deg);
+
+}
+
+
+#beroepenplaatje {
+
+
+    max-width: 50vw;
+    margin: 1em;
+
+
+}
+
+
+header {
+    display: block;
+    text-align: center;
+
+
+}
+
+
+header form {
+
+
+    align: center;
+
+
+}
+
+
+header nav ul li {
+
+
+    display: inline-block;
+
+
+    padding-right: 1em;
+
+
+    font-style: italic;
+
+
+}
+
+
+header p {
+
+
+    display: block;
+    text-shadow: 0.2em 0.1em white;
+
+
+}
+
+
+article {
+
+
+    background-color: lightyellow;
+
+
+
+    border-radius: 1em;
+
+
+    margin: 0.3em;
+
+
+    box-shadow: 1em 1em 1em 0.2em grey;
+
+
+}
+
+
+article p {
+
+
+    max-width: 40em;
+
+
+}
+
+
+section {
+
+
+    margin: 3em;
+
+
+}
+
+
+blockquote {
+
+
+    display: block;
+
+
+    padding: 1em;
+
+
+    border-style: groove;
+
+
+    border-radius: 0.5em;
+
+
+    border-color: black;
+
+
+    box-shadow: 0.3em 0.3em grey;
+
+
+}
+
+blockquote:hover {
+    transform: scale(1.1,1.1);
+    padding: 2em;
+}
+
+
+blockquote p {
+
+
+    font-style: italic;
+
+
+}
+
+
+article {
+
+
+    padding: 1em;
+
+
+}
+
+
+article p {
+
+
+    line-height: 140%;
+
+    margin: auto;
+
+
+}
+
+
+related article {
+
+
+    width: 40em;
+
+
+    display: flex;
+
+
+    flex-direction: row;
+
+
+}
+
+
+aside {
+
+
+    display: inline-flex;
+
+
+}
+
+
+body > footer #sitemap > ul {
+
+
+    display: flex;
+
+
+    justify-content: space-between;
+
+
+}
+
+
+body > footer > #contact p {
+
+
+    display: flex;
+
+
+    justify-content: center;
+
+
+}
+
+body > footer {
+
+    height: 20em;
+    background-color: mintcream;
+    border-radius: 2em;
+    box-shadow: 1em 1em 1em 0.2em floralwhite;
+
+}
+
+
+
+
+body > footer > form {
+
+    align: center;
+}
+
+
+    /* media queries */
+
+@media (max-width: 600px) {
+
+  #logocmd {
+    width: 20em;
+  }
+
+
+
+
+}
