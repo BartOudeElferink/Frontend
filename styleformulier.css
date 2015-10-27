@@ -1,16 +1,39 @@
-/* raar profiel-ding */
+* {
+    font-family: sans-serif;
+}
+/* raar profiel-ding weggelaten */
 
 .to-profile {
     display: none;
 }
+
+/* Styles voor de button ( deze code heb ik geleend van www.weggeefcode.nl door HvA studenten) */
+
+.btn {
+    cursor: pointer;
+}
+
+.btn:hover {}
+
+.btn:active {}
+
+
+/* Verberg het element wanneer het de class hidden heeft */
+
+.hidden {
+    display: none;
+}
+
+
 /* hele pagina */
 
 body {
-    flex-wrap: wrap;
+    width: 90vw;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     align-items: stretch;
-    align-content: center;
+    justify-content: center;
     background-color: white;
     background-image: url(img/opacity50_cmd_overview_icons_total.png);
     background-size: contain;
@@ -20,13 +43,13 @@ body {
 /* header */
 
 body > header {
-    min-width: 98vw;
+    width: 80vw;
     display: flex;
+    text-align: center;
     align-items: center;
     flex-direction: column;
     text-align: center;
     padding: 1em;
-    margin: auto;
     order: 0:
 }
 .headerbalk {
@@ -46,11 +69,11 @@ body > header {
 /* hoofdelementen */
 
 main {
-    width: 58vw;
+    width: 45vw;
     margin: 1vw;
     padding: 3em;
     align-items: baseline;
-    text-align: justify;
+    line-height: 150%;
     background-color: rgba(255, 204, 0, 0.85);
     border-radius: 3em;
     border-style: solid;
@@ -64,6 +87,8 @@ aside {
     padding: 3em;
     align-items: baseline;
     text-align: justify;
+    line-height: 150%;
+    font-size: 80%;
     background-color: rgba(255, 204, 0, 0.85);
     border-radius: 3em;
     border-style: solid;
@@ -72,51 +97,59 @@ aside {
     order: 2;
 }
 .related {
+    width: 80vw;
     display: flex;
-    width: 90vw;
-    margin: 1em;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 1vw;
+    padding: 3em;
     background-color: rgba(255, 255, 153, 0.85);
     border-radius: 3em;
+    text-align: justify;
+    line-height: 120%;
     border-style: solid;
     border-color: black;
     box-shadow: 1em 1em 0.5em 0.1em rgba(0, 0, 0, 0.2);
     order: 3;
 }
-
-
-.related article {
-    align-items: baseline;
-    width: 20vw;
-    padding: 3em;
-    text-align: justify;
-}
-
 /* mooie dingetjes in de artikelen */
 
+header p {
+    text-shadow: 0.2em 0.1em white;
+}
+
+main > article p {
+    text-align: justify;
+    margin-right: 1em;
+}
 main > article > header:first-of-type p {
     margin-left: 1em;
     font-style: italic;
 }
-.related>article>blockquote p {
-    font-style: italic;
-}
-blockquote:hover {
-    transform: scale(1.1, 1.1);
-    padding: 1em;
+
+.related article section {
+    display: flex;
+    flex-direction: column;
 }
 
-.related article dl dt {
-    font-style: italic;
-    display: block;
-    width: 30em;
+.related article dt {
+   font-weight: bold;
 }
+
+.related article dl {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
 
 /* footer */
 
 body > footer {
+    width: 80;
     display: flex;
     flex-direction: row;
-    width: 98vw;
     padding: 2em;
     align-items: baseline;
     border-radius: 2em;
@@ -140,52 +173,110 @@ body footer #sitemap > ul > li {
 #search,
 #contact,
 #credits {
+    display: inline-block;
     margin-right: 1em;
+}
+#credits,
+#feedback {
+    align-self: flex-end;
 }
 /* plaatjes */
 
 #logocmd {
-    width: 90vw;
+    width: 80vw;
     padding: 1em;
     margin: 1.5em;
-    align-self: center;
     background-color: rgba(255, 204, 0, 0.85);
     border-radius: 2em;
     border-style: dotted;
-    border-color: rgba(0,0,0,0.5);
+    border-color: rgba(0, 0, 0, 0.5);
     border-width: 0.4em;
     box-shadow: 1em 1em 0.5em 0.1em rgba(0, 0, 0, 0.2);
 }
-#beroepenplaatje {
-    width: 50vw;
+#logocmd:hover {
+    transform: rotate(20deg);
 }
 
+/* formulier */
 
+input {
+    display:block;
+}
 
-/* media queries */
+body > main label {
+    display: flex;
+    align-items: center;
+    padding: 0.5em;
+    padding-left: 0;
+}
 
-@media (max-width: 80em) {
+fieldset {
+   display: flex;
+    align-content: space-between;
+        border-style:groove;
+        border-width: 0.5em;
+        border-color: rgba(255,255,255, 0.45);
+
+}
+
+label {
+    justify-content: center;
+}
+
+/* MAX */
+
+@media (min-width: 95em) {
+
+    header {
+        order: 1;
+    }
 
     aside {
-        width: 15vw;
+        width: 80vw;
+        display: flex;
+        flex-direction: row;
+        order: 2;
     }
+    aside article {
+        margin-right: 2em;
+    }
+
+    main article p {
+            max-width: 112em;
+    }
+
+    .related {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .related article p {
+        max-width: 112em;
+    }
+    .related article header p {
+    text-align: right;
+    line-height: 0.5em;
 }
 
-@media (max-width: 70em) {
     main {
-        width: 48vw;
-    }
-    aside {
-        width: 20vw;
-    }
-    aside p {
-        min-width: 10em;
-        max-width: 15em;
+        /*background-color: green;*/
+        width: 80vw;
+        order: 3;
     }
 }
+
+    /* KLEIN */
+
 @media (max-width: 50em) {
+    p,
+    h1,
+    h2,
+    h3 {
+        max-width: 41em;
+    }
     main {
-        width: 90vw;
+        width: 70vw;
+        /*background-color: aqua;*/
     }
     aside {
         width: 90vw;
@@ -193,19 +284,9 @@ body footer #sitemap > ul > li {
     .related {
         width: 90vw;
     }
-    .related>article>p {
-        min-width: 20em;
+    body > footer {
+        width: 90vw;
     }
-    blockquote:hover {
-        transform: scale(1, 1);
-        padding: 0em;
-    }
-    #beroepenplaatje {
-        width: 80vw;
-    }
-}
-
-@media (max-width: 28em) {
     body > header {
         align-items: flex-start;
         text-align: left;
@@ -218,4 +299,18 @@ body footer #sitemap > ul > li {
     body > footer {
         flex-direction: column;
     }
+    #search,
+    #about {
+        display: inline-block;
+    }
+
+    #logocmd {
+        align-self: center;
+    }
+    form fieldset label {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
 }

@@ -3,22 +3,23 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Artikelpagina</title>
+        <title>Formulierpagina</title>
         <link type="text/css" rel="stylesheet" href="styleformulier.css" />
+        <script type="text/javascript" src="formulier.js"></script>
     </head>
     <body>
 
         <!-- header met logo & navigatie -->
         <header>
-            <img id="logocmd" src="img/cmd_logo.png" alt="">
+            <img id="logocmd" src="img/cmd_logo.png" alt="logo CMD">
             <section class="headerbalk">
                <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Opleiding</a></li>
-                    <li><a href="#">Onderwijsprogramma</a></li>
-                    <li><a href="#">Organisatie</a></li>
-                    <li><a href="#">Stages en projecten</a></li>
+                <ul id="navcontent">>
+                    <li><a href="#1">Home</a></li>
+                    <li><a href="#2">Opleiding</a></li>
+                    <li><a href="#3">Onderwijsprogramma</a></li>
+                    <li><a href="#4">Organisatie</a></li>
+                    <li><a href="#5">Stages en projecten</a></li>
                 </ul>
             </nav>
             <form method="get" action="Artikelpagina.html">
@@ -41,7 +42,7 @@
             <h1>Aanmelden</h1>
             <p>Bent u geïnteresseerd in samenwerken met CMD Amsterdam? Dat kan! Tijdens de opleiding werken studenten aan projecten voor echte opdrachtgevers. Ook lopen de studenten stage, in het tweede en afstudeerjaar.</p>
             <p>CMD Amsterdam zoekt altijd naar positieve verbindingen met de creatieve stad Amsterdam.</p>
-            <p>Voor het aanmelden van stageplekken of projecten kunt u onderstaand formulier invullen. Wij nemen zo nodig contact met u op nadat het formulier is verstuurd. Voor vragen of opmerkingen kunt u <a href="#">contact</a> met ons op.</p>
+            <p>Voor het aanmelden van stageplekken of projecten kunt u onderstaand formulier invullen. Wij nemen zo nodig contact met u op nadat het formulier is verstuurd. Voor vragen of opmerkingen kunt u <a href="#">contact</a> met ons opnemen.</p>
 
             <form method="post" action="Formulierpagina.html">
 
@@ -49,68 +50,71 @@
                     <legend>Contactgegevens</legend>
                     <label>
                         <span>Naam:</span>
-                        <input type="text" name="name" required>
+                        <input type="text" name="name" placeholder="voor- en achternaam" required>
                         <em>vereist</em>
                     </label>
                     <label>
                         <span>Bedrijf:</span>
-                        <input type="text" name="company" required>
+                        <input type="text" name="company" placeholder="bedrijfsnaam" required>
                         <em>vereist</em>
                     </label>
                     <label>
                         <span>Adres:</span>
-                        <input type="text" name="address" required>
+                        <input type="text" name="address" placeholder="straat + huisnummer" required>
                         <em>vereist</em>
                     </label>
                     <label>
                         <span>Postcode:</span>
-                        <input type="text" name="postal" required>
+                        <input type="text" name="postal" placeholder="postcode" required>
                         <em>vereist</em>
                     </label>
                     <label>
                         <span>Telefoon:</span>
-                        <input type="tel" name="phone">
+                      <input type="tel" name="phone" placeholder="telefoonnummer">
                     </label>
                     <label>
                         <span>E-mailadres:</span>
-                        <input type="email" name="email" required>
+                        <input type="email" name="email" placeholder="emailadres" required>
                         <em>vereist</em>
                     </label>
                 </fieldset>
 
                 <fieldset>
+
+
                     <legend>Ik wil mij aanmelden:</legend>
                     <label>
-                        <input type="radio" name="submit-for" value="project">
+                        <input type="checkbox" class="btn" id="projectknop" value="project">
                         <span>Voor een project</span>
                     </label>
                     <label>
-                        <input type="radio" name="submit-for" value="stage">
+                        <input type="checkbox" class="btn" id="stageknop"  value="stage">
                         <span>Als stagebedrijf</span>
                     </label>
                 </fieldset>
+
 
                 <fieldset id="project">
                     <legend>Project</legend>
                     <label>
                         <span>Titel:</span>
-                        <input type="text" name="project-title">
+                        <input type="text" name="project-title" placeholder="titel van het project">
                     </label>
                     <label>
                         <span>Opdrachtomschrijving:</span>
-                        <textarea name="project-description"></textarea>
+                        <textarea name="project-description" placeholder="geef hier een korte omschrijving van het project"></textarea>
                     </label>
                     <label>
                         <span>Doelgroepomschrijving:</span>
-                        <textarea name="project-target-audience"></textarea>
+                        <textarea name="project-target-audience" placeholder="wat is de doelgroep?"></textarea>
                     </label>
                     <label>
                         <span>Doelstelling/intentie van het project:</span>
-                        <textarea name="project-goal"></textarea>
+                        <textarea name="project-goal" placeholder="wat wilt u bereiken met dit project?"></textarea>
                     </label>
                     <label>
                         <span>Looptijd:</span>
-                        <input type="text" name="project-duration">
+                        <input type="text" name="project-duration" placeholder="looptijd van het project">
                     </label>
                     <label>
                         <span>Deadline:</span>
@@ -126,7 +130,7 @@
                     </fieldset>
                     <label>
                         <span>Opmerking:</span>
-                        <textarea name="project-comments"></textarea>
+                        <textarea name="project-comments"placeholder="bijzonderheden?"></textarea>
                     </label>
                 </fieldset>
 
@@ -149,44 +153,44 @@
                     </label>
                     <label>
                         <span>Beschrijving stagewerkzaamheden</span>
-                        <textarea name="stage-description"></textarea>
+                        <textarea name="stage-description"placeholder="wat doet een stagiar binnen het bedrijf?"></textarea>
                     </label>
                     <fieldset>
                         <legend>Beschrijving stagebedrijf</legend>
                         <label>
                             <span>Bedrijfsnaam:</span>
-                            <input type="text" name="stage-company-name">
+                            <input type="text" name="stage-company-name" placeholder="bedrijfsnaam">
                         </label>
                         <label>
                             <span>Adres:</span>
-                            <input type="text" name="stage-address">
+                            <input type="text" name="stage-address" placeholder="adres">
                         </label>
                         <label>
                             <span>Postcode:</span>
-                            <input type="text" name="stage-postal">
+                            <input type="text" name="stage-postal" placeholder="postcode">
                         </label>
                         <label>
                             <span>Plaats:</span>
-                            <input type="text" name="stage-place">
+                            <input type="text" name="stage-place" placeholder="plaats">
                         </label>
                         <label>
                             <span>Sector:</span>
-                            <input type="text" name="stage-sector">
+                            <input type="text" name="stage-sector" placeholder="sector">
                         </label>
                         <label>
                             <span>Core business:</span>
-                            <input type="text" name="stage-core-business">
+                            <input type="text" name="stage-core-business" placeholder="wat doet het bedrijf?">
                         </label>
                     </fieldset>
                     <label>
                         <span>Opmerking:</span>
-                        <textarea name="stage-comments"></textarea>
+                        <textarea name="stage-comments"placeholder="heeft u nog opmerkingen?"></textarea>
                     </label>
                 </fieldset>
 
                 <input type="submit" value="Aanmelden">
-
             </form>
+
 
         </main>
 
@@ -232,9 +236,9 @@
                 <section>
                     <h4>Downloads</h4>
                     <ul>
-                        <li><a href="bron.pdf" data-kb="1267">project_CMDA_Moet_ik_rennen.pdf</a> (1.3MB)</li>
-                        <li><a href="bron.vcf">Contactgegevens_CMDA_Moet_ik_rennen.vcf</a></li>
-                        <li><a href="bron.jpg" data-kb="569">Poster_CMDA_Moet_ik_rennen.jpg</a> (569KB)</li>
+                        <li><a href="bron.pdf" data-kb="1267">project_CMDA_Moet_ik_rennen.pdf <img src=img/PDFicoon.png /></a> (1.3MB)</li>
+                        <li><a href="bron.vcf">Contactgegevens_CMDA_Moet_ik_rennen.vcf <img src=img/PDFicoon.png /></a></li>
+                        <li><a href="bron.jpg" data-kb="569">Poster_CMDA_Moet_ik_rennen.jpg <img src=img/PDFicoon.png /></a> (569KB)</li>
                     </ul>
                 </section>
             </article>
@@ -280,9 +284,9 @@
                 <section>
                     <h4>Downloads</h4>
                     <ul>
-                        <li><a href="bron.pdf" data-kb="33671">Project_CMDA_Muzieknote.pdf</a> (3.4MB)</li>
-                        <li><a href="bron.vcf">Contactgegevens_CMDA_Muzieknote.vcf</a></li>
-                        <li><a href="bron.jpg" data-kb="678">Poster_CMDA_Muzieknote.jpg</a> (678KB)</li>
+                        <li><a href="bron.pdf" data-kb="33671">Project_CMDA_Muzieknote.pdf <img src=img/PDFicoon.png /></a> (3.4MB)</li>
+                        <li><a href="bron.vcf">Contactgegevens_CMDA_Muzieknote.vcf <img src=img/PDFicoon.png /></a></li>
+                        <li><a href="bron.jpg" data-kb="678">Poster_CMDA_Muzieknote.jpg <img src=img/PDFicoon.png /></a> (678KB)</li>
                     </ul>
                 </section>
             </article>
@@ -327,9 +331,9 @@
                 <section>
                     <h4>Downloads</h4>
                     <ul>
-                        <li><a href="bron.pdf" data-kb="23513">Project_CMDA_TWOSOME.pdf</a> (2,4MB)</li>
-                        <li><a href="bron.vcf">Contactgegevens_CMDA_TWOSOME.vcf</a></li>
-                        <li><a href="bron.jpg" data-kb="1381">Poster_CMDA_TWOSOME.jpg</a> (1381KB)</li>
+                        <li><a href="bron.pdf" data-kb="23513">Project_CMDA_TWOSOME.pdf <img src=img/PDFicoon.png /></a> (2,4MB)</li>
+                        <li><a href="bron.vcf">Contactgegevens_CMDA_TWOSOME.vcf <img src=img/PDFicoon.png /></a></li>
+                        <li><a href="bron.jpg" data-kb="1381">Poster_CMDA_TWOSOME.jpg <img src=img/PDFicoon.png /></a> (1381KB)</li>
                     </ul>
                 </section>
             </article>

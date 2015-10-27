@@ -1,18 +1,14 @@
 * {
     font-family: sans-serif;
 }
-
-
 /* raar profiel-ding weggelaten */
 
 .to-profile {
     display: none;
 }
-
 /* hele pagina */
 
 body {
-
     width: 90vw;
     display: flex;
     flex-wrap: wrap;
@@ -25,22 +21,20 @@ body {
     background-repeat: repeat;
     margin: auto;
 }
-
 /* header */
 
 body > header {
-
     width: 80vw;
     display: flex;
     text-align: center;
-    align-items:center;
+    align-items: center;
     flex-direction: column;
     text-align: center;
     padding: 1em;
     order: 0:
 }
 .headerbalk {
-
+    width: 80vw;
     border-radius: 3em;
     border-style: solid;
     border-color: black;
@@ -68,15 +62,14 @@ main {
     box-shadow: 1em 1em 0.5em 0.1em rgba(0, 0, 0, 0.2);
     order: 1;
 }
-
 aside {
-
     width: 20vw;
     margin: 1vw;
     padding: 3em;
     align-items: baseline;
     text-align: justify;
-     line-height: 150%;
+    line-height: 150%;
+    font-size: 80%;
     background-color: rgba(255, 204, 0, 0.85);
     border-radius: 3em;
     border-style: solid;
@@ -84,7 +77,6 @@ aside {
     box-shadow: 1em 1em 0.5em 0.1em rgba(0, 0, 0, 0.2);
     order: 2;
 }
-
 .related {
     width: 75vw;
     margin: 1vw;
@@ -92,43 +84,30 @@ aside {
     background-color: rgba(255, 255, 153, 0.85);
     border-radius: 3em;
     text-align: justify;
-     line-height: 150%;
+    line-height: 150%;
     border-style: solid;
     border-color: black;
     box-shadow: 1em 1em 0.5em 0.1em rgba(0, 0, 0, 0.2);
     order: 3;
 }
-
 /* mooie dingetjes in de artikelen */
 
-
-
 header p {
-
-
     text-shadow: 0.2em 0.1em white;
-
-
 }
-
 .related article header p {
     text-align: right;
     line-height: 0.5em;
 }
-
 main > article p {
-    text-align: justify;
+
     margin-right: 1em;
-
 }
-
 main > article > header:first-of-type p {
     margin-left: 1em;
     font-style: italic;
 }
-
-
-.related > article>blockquote p {
+.related > article > blockquote p {
     font-style: italic;
 }
 blockquote:hover {
@@ -138,7 +117,6 @@ blockquote:hover {
 /* footer */
 
 body > footer {
-    width: 90vw;
     display: flex;
     flex-direction: row;
     padding: 2em;
@@ -150,18 +128,15 @@ body > footer {
     box-shadow: 1em 1em 0.5em 0.1em rgba(0, 0, 0, 0.2);
     order: 4;
 }
-
 body footer #sitemap > ul {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-
 body footer #sitemap > ul > li {
     padding-left: 1em;
     padding-right: 1em;
 }
-
 #sitemap,
 #about,
 #search,
@@ -170,59 +145,59 @@ body footer #sitemap > ul > li {
     display: inline-block;
     margin-right: 1em;
 }
-
-#credits, #feedback {
+#credits,
+#feedback {
     align-self: flex-end;
 }
-
 /* plaatjes */
 
 #logocmd {
-    width: 60vw;
+    width: 80vw;
     padding: 1em;
     margin: 1.5em;
     background-color: rgba(255, 204, 0, 0.85);
     border-radius: 2em;
     border-style: dotted;
-    border-color: rgba(0,0,0,0.5);
+    border-color: rgba(0, 0, 0, 0.5);
     border-width: 0.4em;
     box-shadow: 1em 1em 0.5em 0.1em rgba(0, 0, 0, 0.2);
 }
-
 #logocmd:hover {
-
-
     transform: rotate(20deg);
-
-
 }
-
 #beroepenplaatje {
     max-width: 40vw;
 }
+#mascotteCMD {
+    max-width: 60vw;
+    margin-top: 1vw;
+    margin-right: 1vw;
+    display: block;
 
+}
+main > article > section > P:nth-of-type(5) picture {
+    display: flex;
+    align-items: center;
+}
+video {
+    width: 100%;
+
+}
 
 /* media queries */
 
+/* KLEIN */
 
-@media (max-width: 75em) {
-
-    aside {
-        width: 15vw;
+@media (max-width: 55em) {
+    p,
+    h1,
+    h2,
+    h3 {
+        max-width: 41em;
     }
-    aside p {
-        min-width: 10em;
-
-    }
-    body > footer {
-        flex-wrap: wrap;
-    }
-}
-
-@media (max-width: 60em) {
-
     main {
-        width: 90vw;
+        width: 70vw;
+        /*background-color: aqua;*/
     }
     aside {
         width: 90vw;
@@ -230,27 +205,9 @@ body footer #sitemap > ul > li {
     .related {
         width: 90vw;
     }
-    .related>article>p {
-        max-width: 20em;
-    }
-    blockquote:hover {
-        transform: scale(1, 1);
-        padding: 0em;
-    }
     body > footer {
-        width: 80vw;
+        width: 90vw;
     }
-    #beroepenplaatje {
-        max-width: 80vw;
-    }
-    #search, #about {
-        display: none;
-    }
-}
-
-@media (max-width: 28em) {
-
-
     body > header {
         align-items: flex-start;
         text-align: left;
@@ -263,8 +220,189 @@ body footer #sitemap > ul > li {
     body > footer {
         flex-direction: column;
     }
-    #search, #about {
-        display:inline-block;
+    #search,
+    #about {
+        display: inline-block;
     }
 
+    #logocmd {
+        align-self: center;
+    }
+
+    #beroepenplaatje {
+        max-width: 60vw;
+    }
+
+    blockquote:hover {
+    transform: scale(1, 1);
+    padding: 0em;
+}
+}
+/* MIDDEL */
+
+/*Ipad pakt deze:*/
+
+@media (min-width: 55em) {
+    main {
+        /*background-color: red;*/
+    }
+    p,
+    h1,
+    h2,
+    h3 {
+        max-width: 89em;
+    }
+    blockquote:hover {
+        transform: scale(1.05, 1.05);
+        padding: 0.5em;
+    }
+    #beroepenplaatje {
+        max-width: 45vw;
+    }
+        #mascotteCMD {
+        max-width: 40vw;
+    }
+    #credits {
+        align-self: baseline;
+    }
+    #feedback {
+        align-self: center;
+        display: none;
+    }
+}
+/*Ipad landscape footer fix:*/
+
+@media screen and (device-width: 768px) and (orientation: landscape) {
+    body > footer {
+        flex-direction: column;
+    }
+}
+/* GROOT */
+
+@media (min-width: 70em) {
+    body {
+        width: 90vw;
+        align-items: baseline;
+    }
+    #logocmd {
+        width: 60vw;
+        order: 1;
+    }
+    .headerbalk {
+        width: 80vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        order: 2;
+    }
+
+    .headerbalk > nav ul {
+        display: flex;
+    }
+
+    body > header {
+        width: 60vw;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        padding: 1em;
+        order: 0:
+    }
+    main {
+        /*background-color: blueviolet;*/
+        width: 80vw;
+        order: 3;
+        margin-top: 0;
+        margin-right: 0.5vw;
+    }
+   aside {
+        width: 80vw;
+        display: flex;
+        flex-direction: row;
+        order: 2;
+    }
+    aside article {
+        margin-right: 2em;
+    }
+    .related {
+        display: flex;
+        flex-direction: row;
+        width: 80vw;
+        margin-bottom: 1vw;
+        order: 6;
+    }
+    .related p {
+        max-width: 70em;
+        text-align: left;
+    }
+    .related h3,h4:first-of-type {
+        text-align: left;
+
+    }
+    .related article {
+        margin-left: 1.5em;
+        max-width: 70em;
+        border-style:groove;
+        border-width: 0.5em;
+        border-color: rgba(255,255,255, 0.45);
+    }
+    .related article header p {
+        text-align: left;
+        line-height: 1em;
+    }
+    body > footer {
+        width: 80vw;
+        order: 7;
+    }
+    #beroepenplaatje {
+        max-width: 50vw;
+    }
+
+
+}
+/* MAX */
+
+@media (min-width: 95em) {
+
+    header {
+        order: 1;
+    }
+
+    aside {
+        width: 80vw;
+        display: flex;
+        flex-direction: row;
+        order: 2;
+    }
+    aside article {
+        margin-right: 2em;
+    }
+
+    main article p {
+            max-width: 112em;
+    }
+
+    .related {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .related article p {
+        max-width: 112em;
+    }
+    .related article header p {
+    text-align: right;
+    line-height: 0.5em;
+}
+
+    main {
+        /*background-color: green;*/
+        width: 80vw;
+        order: 3;
+    }
+    #beroepenplaatje {
+        max-width: 60vw;
+    }
 }
