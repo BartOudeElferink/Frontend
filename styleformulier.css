@@ -1,21 +1,16 @@
+/*Audio disclaimer: "Kawai Kitsune" Kevin MacLeod (incompetech.com)
+Licensed under Creative Commons: By Attribution 3.0
+http://creativecommons.org/licenses/by/3.0/*/
+
 * {
     font-family: sans-serif;
 }
+
 /* raar profiel-ding weggelaten */
 
 .to-profile {
     display: none;
 }
-
-/* Styles voor de button ( deze code heb ik geleend van www.weggeefcode.nl door HvA studenten) */
-
-.btn {
-    cursor: pointer;
-}
-
-.btn:hover {}
-
-.btn:active {}
 
 
 /* Verberg het element wanneer het de class hidden heeft */
@@ -66,6 +61,11 @@ body > header {
     padding-right: 1em;
     font-style: italic;
 }
+
+.headerbalk > form {
+   display: inline-block;
+}
+
 /* hoofdelementen */
 
 main {
@@ -241,6 +241,11 @@ label {
         margin-right: 2em;
     }
 
+    main {
+        width: 80vw;
+        order: 3;
+    }
+
     main article p {
             max-width: 112em;
     }
@@ -258,11 +263,6 @@ label {
     line-height: 0.5em;
 }
 
-    main {
-        /*background-color: green;*/
-        width: 80vw;
-        order: 3;
-    }
 }
 
     /* KLEIN */

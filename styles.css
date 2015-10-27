@@ -1,3 +1,5 @@
+
+
 * {
     font-family: sans-serif;
 }
@@ -114,6 +116,7 @@ blockquote:hover {
     transform: scale(1.1, 1.1);
     padding: 1em;
 }
+
 /* footer */
 
 body > footer {
@@ -176,7 +179,7 @@ body footer #sitemap > ul > li {
 
 }
 main > article > section > P:nth-of-type(5) picture {
-    display: flex;
+
     align-items: center;
 }
 video {
@@ -311,7 +314,6 @@ video {
         order: 0:
     }
     main {
-        /*background-color: blueviolet;*/
         width: 80vw;
         order: 3;
         margin-top: 0;
@@ -398,7 +400,6 @@ video {
 }
 
     main {
-        /*background-color: green;*/
         width: 80vw;
         order: 3;
     }
