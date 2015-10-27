@@ -60,6 +60,7 @@ body > header {
     display: inline-block;
     padding-right: 1em;
     font-style: italic;
+     font-size: 120%;
 }
 
 .headerbalk > form {
