@@ -172,6 +172,7 @@ body footer #sitemap > ul > li {
 #beroepenplaatje {
     max-width: 40vw;
 }
+
 #mascotteCMD {
     max-width: 60vw;
     margin-top: 1vw;
@@ -183,6 +184,7 @@ main > article > section > P:nth-of-type(5) picture {
 
     align-items: center;
 }
+
 video {
     width: 100%;
 
@@ -201,7 +203,6 @@ video {
     }
     main {
         width: 70vw;
-        /*background-color: aqua;*/
     }
     aside {
         width: 90vw;
@@ -216,11 +217,13 @@ video {
         align-items: flex-start;
         text-align: left;
     }
-    .headerbalk > nav ul {
+    .headerbalk > nav ul li {
         display: flex;
+        border-style: none;
         flex-direction: column;
         text-align: left;
     }
+
     body > footer {
         flex-direction: column;
     }
@@ -241,6 +244,14 @@ video {
     transform: scale(1, 1);
     padding: 0em;
 }
+    article {
+     background-color:rgba(250, 250, 250, 0.2);
+   }
+
+   main article p {
+        margin-left: 2em;
+    }
+
 }
 /* MIDDEL */
 
@@ -273,6 +284,15 @@ video {
         align-self: center;
         display: none;
     }
+     article {
+     background-color:rgba(250, 250, 250, 0.2);
+   }
+
+   main article p {
+        margin-left: 2em;
+    }
+
+
 }
 /*Ipad landscape footer fix:*/
 
@@ -347,8 +367,8 @@ video {
     .related article {
         margin-left: 1.5em;
         max-width: 70em;
-        border-style:groove;
-        border-width: 0.5em;
+        border-style:solid;
+        border-width: 0.2em;
         border-color: rgba(255,255,255, 0.45);
     }
     .related article header p {
@@ -362,6 +382,14 @@ video {
     #beroepenplaatje {
         max-width: 50vw;
     }
+    article {
+     background-color:rgba(250, 250, 250, 0.2);
+   }
+
+   main article p {
+        margin-left: 2em;
+    }
+
 
 
 }
@@ -407,4 +435,5 @@ video {
     #beroepenplaatje {
         max-width: 60vw;
     }
+
 }

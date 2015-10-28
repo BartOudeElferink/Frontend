@@ -198,6 +198,12 @@ body footer #sitemap > ul > li {
     transform: rotate(20deg);
 }
 
+ article {
+     background-color:rgba(250, 250, 250, 0.2);
+   }
+
+
+
 /* formulier */
 
 input {
@@ -211,16 +217,17 @@ body > main label {
     padding-left: 0;
 }
 
-fieldset {
-   display: flex;
-    align-content: space-between;
+fieldset  {
         border-style:groove;
         border-width: 0.5em;
         border-color: rgba(255,255,255, 0.45);
 
 }
 
+
 label {
+    display: flex;
+    flex-direction: row;
     justify-content: center;
 }
 
@@ -254,10 +261,18 @@ label {
     .related {
         display: flex;
         flex-direction: column;
+     background-color:rgba(250, 250, 250, 0.2);
+   }
+
+
     }
 
     .related article p {
         max-width: 112em;
+     background-color:rgba(250, 250, 250, 0.2);
+   }
+
+
     }
     .related article header p {
     text-align: right;
