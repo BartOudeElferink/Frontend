@@ -33,6 +33,7 @@ body {
     background-image: url(img/opacity50_cmd_overview_icons_total.png);
     background-size: contain;
     background-repeat: repeat;
+    background-attachment: fixed;
     margin: auto;
 }
 /* header */
@@ -70,7 +71,7 @@ body > header {
 /* hoofdelementen */
 
 main {
-    width: 45vw;
+    max-width: 80vw;
     margin: 1vw;
     padding: 3em;
     align-items: baseline;
@@ -83,7 +84,7 @@ main {
     order: 1;
 }
 aside {
-    width: 20vw;
+    max-width: 20vw;
     margin: 1vw;
     padding: 3em;
     align-items: baseline;
@@ -98,7 +99,7 @@ aside {
     order: 2;
 }
 .related {
-    width: 80vw;
+    max-width: 80vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -140,7 +141,7 @@ header p {
 /* footer */
 
 body > footer {
-    width: 80;
+    width: 80vw;
     display: flex;
     flex-direction: row;
     padding: 2em;
@@ -198,8 +199,11 @@ body footer #sitemap > ul > li {
 
 /* formulier */
 
-input {
-    display:block;
+input:focus {
+    transform: rotate(-2deg);
+    box-shadow: 1em 1em 0.5em 0.1em rgba(0, 0, 0, 0.2);
+
+
 }
 
 body > main label {
@@ -210,7 +214,9 @@ body > main label {
 }
 
 fieldset  {
-        border-style:groove;
+
+    max-width: 20vw;
+    border-style:groove;
         border-width: 0.5em;
         border-color: rgba(255,255,255, 0.45);
 
@@ -219,190 +225,12 @@ fieldset  {
 
 label {
     display: flex;
+      vertical-align: middle;
     flex-direction: row;
     justify-content: center;
 }
 
-/* MAX */
 
-@media (min-width: 95em) {
-
-    header {
-        order: 1;
-    }
-
-    aside {
-        width: 80vw;
-        display: flex;
-        flex-direction: row;
-        order: 2;
-    }
-    aside article {
-        margin-right: 2em;
-    }
-
-    main {
-        width: 80vw;
-        order: 3;
-    }
-
-    main article p {
-            max-width: 112em;
-    }
-
-    .related {
-        display: flex;
-        flex-direction: column;
-     background-color:rgba(250, 250, 250, 0.2);
-   }
-
-
-    }
-
-    .related article p {
-        max-width: 112em;
-     background-color:rgba(250, 250, 250, 0.2);
-   }
-
-
-    }
-    .related article header p {
-    text-align: right;
-    line-height: 0.5em;
-}
-
-}
-
-/* GROOT */
-
-@media (min-width: 70em) {
-    body {
-        width: 90vw;
-        align-items: baseline;
-    }
-    #logocmd {
-        width: 60vw;
-        order: 1;
-    }
-    .headerbalk {
-        width: 80vw;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        order: 2;
-    }
-
-    .headerbalk > nav ul {
-        display: flex;
-    }
-
-    body > header {
-        width: 60vw;
-        display: flex;
-        text-align: center;
-        align-items: center;
-        flex-direction: column;
-        text-align: center;
-        padding: 1em;
-        order: 0:
-    }
-    main {
-        width: 80vw;
-        order: 3;
-        margin-top: 0;
-        margin-right: 0.5vw;
-    }
-   aside {
-        width: 80vw;
-        display: flex;
-        flex-direction: row;
-        order: 2;
-    }
-    aside article {
-        margin-right: 2em;
-    }
-    .related {
-        display: flex;
-        flex-direction: row;
-        width: 80vw;
-        margin-bottom: 1vw;
-        order: 6;
-    }
-    .related p {
-        max-width: 70em;
-        text-align: left;
-    }
-    .related h3,h4:first-of-type {
-        text-align: left;
-
-    }
-    .related article {
-        margin-left: 1.5em;
-        max-width: 70em;
-        border-style:solid;
-        border-width: 0.2em;
-        border-color: rgba(255,255,255, 0.45);
-    }
-    .related article header p {
-        text-align: left;
-        line-height: 1em;
-    }
-    body > footer {
-        width: 80vw;
-        order: 7;
-    }
-    #beroepenplaatje {
-        max-width: 50vw;
-    }
-    article {
-     background-color:rgba(250, 250, 250, 0.2);
-   }
-
-   main article p {
-        margin-left: 2em;
-    }
-
-
-
-/* MIDDEL */
-
-/*Ipad pakt deze:*/
-
-@media (min-width: 55em) {
-    main {
-        /*background-color: red;*/
-    }
-    p,
-    h1,
-    h2,
-    h3 {
-        max-width: 89em;
-    }
-
-    #beroepenplaatje {
-        max-width: 45vw;
-    }
-        .mascotteCMD {
-        max-width: 40vw;
-    }
-    #credits {
-        align-self: baseline;
-    }
-    #feedback {
-        align-self: center;
-        display: none;
-    }
-
-
-}
-/*Ipad landscape footer fix:*/
-
-@media screen and (device-width: 768px) and (orientation: landscape) {
-    body > footer {
-        flex-direction: column;
-    }
-}
-}
 
     /* KLEIN */
 
@@ -414,14 +242,18 @@ label {
         max-width: 41em;
     }
     main {
-        width: 70vw;
+        max-width: 80vw;
     }
     aside {
-        width: 70vw;
+        max-width: 80vw;
+         font-size: 100%;
     }
+
     .related {
-        width: 70vw;
+        max-width: 80vw;
     }
+
+
 
     .related article p {
         max-width: 20em;
@@ -474,10 +306,215 @@ label {
     #logocmd {
         align-self: center;
     }
+
+
+
+
+
     form fieldset label {
         display: flex;
         flex-direction: column;
     }
 
 }
+
+
+/* MIDDEL */
+
+/*Ipad pakt deze:*/
+
+@media (min-width: 50em) {
+
+    p,
+    h1,
+    h2,
+    h3 {
+        max-width: 90em;
+    }
+
+    #credits {
+        align-self: baseline;
+    }
+    #feedback {
+        align-self: center;
+        display: none;
+    }
+
+    main {
+        max-width: 40vw;
+    }
+
+    aside {
+        max-width: 20vw;
+    }
+
+
+}
+/*Ipad landscape footer fix:*/
+
+@media screen and (device-width: 768px) and (orientation: landscape) {
+    body > footer {
+        flex-direction: column;
+    }
+}
+}
+/* GROOT */
+
+@media (min-width: 70em) {
+
+    body {
+        max-width: 90vw;
+        align-items: baseline;
+    }
+    #logocmd {
+        max-width: 60vw;
+        order: 1;
+    }
+
+     body > header {
+        min-width: 80vw;
+        max-width: 90vw;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        padding: 1em;
+        order: 2:
+    }
+
+
+    .headerbalk {
+        min-width: 80vw;
+        max-width: 90vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .headerbalk > nav ul {
+        display: flex;
+    }
+
+    main {
+        min-width: 50vw;
+        max-width: 60vw;
+        order: 3;
+        margin-top: 0;
+        margin-right: 0.5vw;
+    }
+   aside {
+        max-width: 80vw;
+        display: flex;
+        flex-direction: row;
+        order: 2;
+    }
+    aside article {
+        margin-right: 2em;
+    }
+    .related {
+         max-width: 80vw;
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 1vw;
+        order: 6;
+    }
+    .related p {
+        max-width: 70em;
+        text-align: left;
+    }
+    .related h3,h4:first-of-type {
+        text-align: left;
+
+    }
+    .related article {
+        margin-left: 1.5em;
+        max-width: 70em;
+        border-style:solid;
+        border-width: 0.2em;
+        border-color: rgba(255,255,255, 0.45);
+    }
+    .related article header p {
+        text-align: left;
+        line-height: 1em;
+    }
+    body > footer {
+        max-width: 80vw;
+        order: 7;
+    }
+    #beroepenplaatje {
+        max-width: 50vw;
+    }
+    article {
+     background-color:rgba(250, 250, 250, 0.2);
+   }
+
+   main article p {
+        margin-left: 2em;
+    }
+}
+
+/* MAX */
+
+@media (min-width: 95em) {
+
+    header {
+        min-width: 80vw;
+        max-width: 90vw;
+        order: 1;
+    }
+
+    .headerbalk {
+        min-width: 80vw;
+        max-width: 90vw;
+    }
+
+
+    aside {
+        min-width: 15vw;
+        max-width: 20vw;
+        display: flex;
+        flex-direction: row;
+        order: 3;
+    }
+    aside article {
+        margin-right: 2em;
+    }
+
+    main {
+        min-width: 40vw;
+        max-width: 50vw;
+        order: 2;
+    }
+
+
+    .related {
+        max-width: 80vw;
+        display: flex;
+        flex-direction: column;
+        order: 4;
+   }
+
+
+
+    }
+
+    .related article p {
+        max-width: 40em;
+     background-color:rgba(250, 250, 250, 0.2);
+   }
+
+
+    }
+    .related article header p {
+    text-align: right;
+    line-height: 0.5em;
+}
+
+label {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
 }

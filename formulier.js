@@ -1,4 +1,5 @@
 // deze code heb ik geleend van www.weggeefcode.nl door HvA studenten
+
 // Het script mag pas uitgevoerd worden wanneer de pagina geladen is.
 
 document.addEventListener("DOMContentLoaded", function (keuze) {
@@ -12,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function (keuze) {
     //    Als javascript niet beschikbaar is wordt de content dus NIET verborgen.
     projectcontent.classList.add('hidden');
 
-    // Wanneer er op de button geklikt wordt voeren we een functie uit.
+    // Wanneer er op de button geklikt wordt voer ik een functie uit.
     projectknop.addEventListener("click", function () {
 
         // Als de button nu aangevinkt is wordt het menu zichtbaar, en anders verborgen
